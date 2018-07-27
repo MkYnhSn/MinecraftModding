@@ -1,0 +1,18 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+
+    {
+      "item": "cm:banana"
+    }
+
+    ],
+
+    "result": 
+    {
+        "item": "cm:banana_seed",
+        "count": 3
+    }
+}

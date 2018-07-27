@@ -1,0 +1,18 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+
+    {
+      "item": "cm:uranium_ore"
+    }
+    
+    ],
+
+    "result": 
+    {
+        "item": "cm:uranium_ingot",
+        "count": 1
+    }
+}

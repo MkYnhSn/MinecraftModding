@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "RIR",
+        "RIR",
+        "IRI"
+    ],
+    
+    "key":
+    {
+        "R":
+        {
+            "item": "cm:cby"
+        },
+        
+        "I":
+        {
+            "item": "minecraft:iron_ingot"
+        }
+    },
+    
+    "result":
+    {
+        "item": "cm:cby_block",
+        "count": 1
+    }
+}

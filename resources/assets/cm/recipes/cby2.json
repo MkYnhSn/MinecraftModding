@@ -1,0 +1,22 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+
+    {
+      "item": "cm:cby_block"
+    },
+
+    {
+      "item": "cm:cby_block"
+    }
+    
+    ],
+
+    "result": 
+    {
+        "item": "cm:cby",
+        "count": 10
+    }
+}

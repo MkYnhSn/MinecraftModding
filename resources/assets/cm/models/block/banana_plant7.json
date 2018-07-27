@@ -1,0 +1,7 @@
+{
+    "parent": "block/crop",
+    "textures": {
+        "crop": "cm:blocks/banana_plant7"
+    }
+}
+    

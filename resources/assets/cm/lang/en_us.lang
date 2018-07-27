@@ -1,0 +1,20 @@
+item.ruby.name= Ruby
+item.cby.name= CBY
+item.banana.name= Banana
+item.banana_seed.name= Banana Seeds
+item.uranium_ingot.name= Uranium
+
+tile.ruby_block.name=Block of Ruby
+tile.cby_block.name=CBY Block
+tile.banana_plant.name=Banana Plant
+tile.uranium_ore.name= Uranium Ore
+
+item.cby_sword.name= CBY Sword
+
+item.cby_chestplate.name= CBY Chestplate
+
+item.firegun.name= Firegun
+item.thor.name= The Hammer
+
+entity.unicorn.name=Unicorn
+

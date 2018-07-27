@@ -1,0 +1,10 @@
+{
+    
+    "variants": {
+        "stage=0, variant=uranium": {"model": "cm:sapling_uranium"},
+        
+        "stage=1, variant=uranium": {"model": "cm:log_uranium"},
+        
+        }
+        
+}

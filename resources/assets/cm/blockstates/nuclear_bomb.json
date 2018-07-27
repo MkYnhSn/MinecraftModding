@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "explode=false": {"model": "cm:nuclear_bomb"},
+        "explode=true": {"model": "cm:nuclear_bomb"}
+    }
+}

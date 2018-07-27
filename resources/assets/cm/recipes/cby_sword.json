@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        " R ",
+        " R ",
+        " R "
+    ],
+    
+    "key":
+    {
+        "R":
+        {
+            "item": "cm:cby"
+        }
+    },
+    
+    "result":
+    {
+        "item": "cm:cby_sword",
+        "count": 1
+    }
+}
