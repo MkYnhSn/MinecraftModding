@@ -20,6 +20,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
+
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION)
 public class Main {
 
@@ -36,6 +37,7 @@ public class Main {
 		ModEntities.registryEntities();
 		RenderHandler.registerEntityRender();
 		RegistryHandler.otherRegistries();
+		RegistryHandler.onFluidRegister();
 	}
 	
 	@EventHandler
