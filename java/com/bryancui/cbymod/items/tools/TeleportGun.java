@@ -3,6 +3,7 @@ package com.bryancui.cbymod.items.tools;
 import com.bryancui.cbymod.entity.EntityUnicorn;
 import com.bryancui.cbymod.items.ItemBase;
 
+import net.minecraft.entity.item.EntityEnderPearl;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemArrow;
@@ -23,7 +24,7 @@ public class TeleportGun extends ItemBase
 		this.maxStackSize=1;
 	}
 	
-	int count = 0;
+	private int count = 0;
 	
 	
 	//code for ammo system: 
@@ -75,25 +76,29 @@ public class TeleportGun extends ItemBase
 		boolean empty=this.findAmmo(playerIn).isEmpty();
 		ItemStack ammo = this.findAmmo(playerIn);
 		
-		double tpX = playerIn.posX + aim.x*30;
-		double tpY = playerIn.posY + aim.y*30;
-		double tpZ = playerIn.posZ + aim.z*30;
+		double tpX = playerIn.posX + aim.x*0.5;
+		double tpY = playerIn.posY + aim.y*0.5;
+		double tpZ = playerIn.posZ + aim.z*0.5;
 		
 		
 		
-		if(!empty)
+		if(!empty||playerIn.isCreative())
 		{
-		playerIn.setPosition(tpX, tpY, tpZ);
-		worldIn.playSound((EntityPlayer)null, playerIn.posX, playerIn.posY, playerIn.posZ, SoundEvents.ENTITY_ENDERPEARL_THROW, SoundCategory.NEUTRAL, 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
-		count = count + 1;
-		if(count == 4)
-		{
-			playerIn.getCooldownTracker().setCooldown(this, 50);
-			count = 0;
-			ammo.shrink(1);
-		}
-		
-		
+			EntityEnderPearl ep = new EntityEnderPearl(worldIn, playerIn);
+			ep.setPosition(tpX, tpY, tpZ);
+			ep.shoot(aim.x, aim.y, aim.z, 5, 0f);
+			ep.setNoGravity(true);
+			worldIn.spawnEntity(ep);
+			
+			if(!playerIn.isCreative()) {
+				count++;
+				if(count == 4)
+				{
+					playerIn.getCooldownTracker().setCooldown(this, 50);
+					count = 0;
+				}
+				ammo.shrink(1);
+			}
 		}
 		else
 		{
